@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mensagem Especial</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			background-image: url('IMG-20250612-WA0096.jpg');
+			background-size: cover;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		
+		#galeria {
+			display: none;
+		}
+		
+		#videos {
+			display: none;
+		}
+		
+		#mensagem {
+			display: none;
+			white-space: pre-wrap;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+		
+		img {
+			width: 30%;
+			height: auto;
+			margin: 10px;
+		}
+		
+		video {
+			width: 50%;
+			height: auto;
+			margin: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>feliz 12.06</h1>
+	<button id="botao-galeria">Ver Fotos</button>
+	<div id="galeria">
+		<img src="IMG-20210913-WA0029.jpg" alt="Foto 1">
+		<img src="IMG_20230502_114110_604.jpg" alt="Foto 2">
+		<img src="IMG_20230601_085727_398.jpg" alt="Foto 3">
+		<img src="IMG_20230601_085727_398.jpg" alt="Foto 4">
+		<img src="IMG_20250323_212351_132.webp" alt="Foto 5">
+		<img src="IMG_20250323_212429_388.webp" alt="Foto 6">
+	</div>
+	
+	<button id="botao-videos">Ver Vídeos</button>
+	<div id="videos">
+		<h2>Vídeo 1</h2>
+		<video controls>
+			<source src="safe.mp4" type="video/mp4">
+			Seu navegador não suporta o elemento de vídeo.
+		</video>
+	</div>
+	
+	<button id="botao-mensagem">Ler Mensagem</button>
+	<div id="mensagem">
+		<!-- A mensagem será carregada aqui -->
+         
+	</div>
+	
+	<script>
+		const botaoGaleria = document.getElementById("botao-galeria");
+		const galeria = document.getElementById("galeria");
+		
+		botaoGaleria.addEventListener("click", () => {
+			if (galeria.style.display === "none") {
+				galeria.style.display = "block";
+				botaoGaleria.textContent = "Ocultar Fotos";
+			} else {
+				galeria.style.display = "none";
+				botaoGaleria.textContent = "Ver Fotos";
+			}
+		});
+		
+		const botaoVideos = document.getElementById("botao-videos");
+		const videos = document.getElementById("videos");
+		
+		botaoVideos.addEventListener("click", () => {
+			if (videos.style.display === "none") {
+				videos.style.display = "block";
+				botaoVideos.textContent = "Ocultar Vídeos";
+			} else {
+				videos.style.display = "none";
+				botaoVideos.textContent = "Ver Vídeos";
+			}
+		});
+		
+		const botaoMensagem = document.getElementById("botao-mensagem");
+		const mensagem = document.getElementById("mensagem");
+		
+		botaoMensagem.addEventListener("click", () => {
+			if (mensagem.style.display === "none") {
+				mensagem.style.display = "block";
+				mensagem.innerText = "De mim, uma escritora que te ama.Hoje é um dia especial, não só por ser o dia dos namorados, mas acredito eu que porque ao mundo veio você, Amanda, Nívia Amanda, um nome muito bonito por sinal, um significado lindo por trás de alguém tão meiga, tão dócil e tão luz como você, você que dança, você que até canta, nossa, a palavra que tenho hoje é gratidão, gratidão por ser essa menina incrível que é nas nossas vidas, em especial na minha. Você já teve perdas, você já passou por muita coisa ao longo desses 19 anos de sua vida, você já amou, já brincou, já chorou... Eu queria fazer algo maior, acredite, eu fiz um site esse que apresento, mas essa eu vou deixar pra te mostrar pessoalmente com alguns presentes que levo pra você. Eu te admiro, admiro como uma nota de música tocada, admiro como cada passo que você faz na dança, muito bem executado por você. Tu é linda, é rara, é pura. Te desejo um sucesso enorme em sua vida.Que a vida te traga sempre alegria, saúde e felicidade. Que cada passo que você dê seja guiado pela sua paixão e pelo seu coração. Nívia Amanda, um nome que carrega consigo a nobreza e a amabilidade, características que você possui em abundância. 'Nívia' vem do latim e significa 'nova', 'jovem', e 'Amanda' significa 'digna de amor', o que é perfeitamente adequado para você, pois você é uma pessoa que ilumina a vida de todos ao seu redor. Você é uma pessoa incrível, com um brilho que ilumina tudo ao seu redor. Eu desejo que você continue a dançar, a cantar, a sonhar e a conquistar todos os seus objetivos. Você merece todo o sucesso e felicidade do mundo.Eu sempre estarei ao seu lado, para apoiá-la, para amá-la e para celebrar cada conquista sua. Você não está sozinha, Nívia Amanda, e eu estou aqui para compartilhar todos os momentos, bons e ruins, com você. Juntos, vamos criar memórias inesquecíveis e construir um futuro cheio de amor, alegria e sucesso. Eu te amo mesmo que não de modo romântico eu te amo, como amiga, como irmã agora e sempre";
+				botaoMensagem.textContent = "Ocultar Mensagem";
+			} else {
+				mensagem.style.display = "none";
+				botaoMensagem.textContent = "Ler Mensagem";
+			}
+		});
+	</script>
+</body>
+</html>
